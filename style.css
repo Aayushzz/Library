@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+}
+header {
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  background-color: antiquewhite;
+  font-size: 35px;
+  font-weight: bold;
+  color: skyblue;
+  box-shadow: 0px 2px 5px -1px rgba(91, 164, 217, 1);
+}
+.grid-container {
+    margin-top: 5%;
+  margin-left: 15%;
+  margin-right: 15%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  gap: 32px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: antiquewhite;
+    height: 300px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 5px -1px rgba(91, 164, 217, 1);
+    font-size: 35px;
+    font-weight: bold;
+    color: skyblue;
+}
+.add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-btn {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid skyblue;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: skyblue;
+  cursor: pointer;
+  
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 5%;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 150px;
+  will-change: transform;
+}
+
+.add-btn:disabled {
+  pointer-events: none;
+}
+
+.add-btn:hover {
+  color: antiquewhite;
+  background-color: skyblue;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.add-btn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+.ask-card {
+    position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: antiquewhite;
+  text-align: center;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.2s ease-in-out;
+  
+}
+.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+.ask-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
